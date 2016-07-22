@@ -6,3 +6,4 @@
       <p>Token: <%=request.env['omniauth.auth']['credentials']['token']%></p>
 
 <p>session = ShopifyAPI::Session.new("SHOP_NAME.myshopify.com", token)</p>
+<p>session = <%=ShopifyAPI::Session.new(<%=request.env['omniauth.auth'].uid%>, <%=request.env['omniauth.auth']['credentials']['token']%>)%></p>
