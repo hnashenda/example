@@ -1,14 +1,15 @@
 Rails.application.routes.draw do
-   get "users_products/destroy"
-  get "products/index"
-  get "add/index"
-  get "search", to: "search#index"
-  get "user/index"
-  root "home#index"
-  get "/auth/:provider", to: "sessions#create"
-  resources :users, path: '/wishlist'
-  resources :products, path: '/add'
-  resources :users_products, only: :destroy
+  # get "users_products/destroy"
+ # get "products/index"
+ # get "add/index"
+#  get "search", to: "search#index"
+#  get "user/index"
+  get '/auth/:provider/callback', to: 'sessions#create'
+#  root "home#index"
+#  get "/auth/:provider", to: "sessions#create"
+#  resources :users, path: '/wishlist'
+#  resources :products, path: '/add'
+#  resources :users_products, only: :destroy
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
