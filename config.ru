@@ -12,7 +12,7 @@ SCOPE = 'read_products,read_orders,read_customers,write_shipping'
 #SHOPIFY_API_KEY = ENV['SHOPIFY_API_KEY']
 #SHOPIFY_SHARED_SECRET = ENV['SHOPIFY_SHARED_SECRET']
 SHOPIFY_API_KEY="613ab5bbe4133b6c004ec13676f9cbb9"
-SHOPIFY_SHARED_SECRET ="32882d6e104540184f8e04b07bb584d9-1469125719"
+SHOPIFY_SHARED_SECRET ="7909c08a914042a7ca9b3785577af406-1469176467"
 unless SHOPIFY_API_KEY && SHOPIFY_SHARED_SECRET
   abort("SHOPIFY_API_KEY and SHOPIFY_SHARED_SECRET environment variables must be set")
 end
@@ -59,7 +59,7 @@ class App < Sinatra::Base
     <body>
       <h3>Failed Authorization</h3>
       <p>Message: #{params[:message]}</p>
-     
+
     </body>
     </html>
     HTML
