@@ -70,6 +70,8 @@ end
 
 use Rack::Session::Cookie, secret: SecureRandom.hex(64)
 
-
+use OmniAuth::Builder do
+  provider :shopify, SHOPIFY_API_KEY, SHOPIFY_SHARED_SECRET, :scope => SCOPE
+end
 
 run App.new
