@@ -3,6 +3,4 @@
 <h3>Authorized</h3>
       <p>Shop: <%=request.env['omniauth.auth'].uid%></p>
 <p>Shop21: request.env['omniauth.auth'].uid</p>
-      <p>Token: <%=request.env['omniauth.auth']['credentials']['token']}%></p>
-
-<p>session = ShopifyAPI::Session.new("SHOP_NAME.myshopify.com", token)</p>
+      <p>Token: #{request.env['omniauth.auth']['credentials']['token']}</p>
