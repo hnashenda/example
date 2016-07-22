@@ -4,8 +4,9 @@ Rails.application.routes.draw do
  # get "add/index"
 #  get "search", to: "search#index"
 #  get "user/index"
+ # get '/auth/:provider/callback', to: 'sessions#create'
+  root "home#index"
   get '/auth/:provider/callback', to: 'sessions#create'
-#  root "home#index"
 #  get "/auth/:provider", to: "sessions#create"
 #  resources :users, path: '/wishlist'
 #  resources :products, path: '/add'
