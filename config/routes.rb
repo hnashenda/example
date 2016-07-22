@@ -1,5 +1,16 @@
 Rails.application.routes.draw do
-
+get "users_products/destroy"
+  get "products/index"
+  get "add/index"
+  get "search", to: "search#index"
+  get "user/index"
+  root "home#index"
+  match '/auth/:provider/callback', :to => 'sessions#create',:via => [:get, :post]
+  match '/auth/failure', :to => 'sessions#failure',:via => [:get, :post]
+  #get "/auth/:provider", to: "sessions#create"
+  resources :users, path: '/wishlist'
+  resources :products, path: '/add'
+  resources :users_products, only: :destroy
 
   # get "users_products/destroy"
  # get "products/index"
@@ -9,8 +20,8 @@ Rails.application.routes.draw do
   root "home#index"
  # get '/auth/:provider/callback', to: 'sessions#create'
   #get   '/login', :to => 'sessions#new', :as => :login
-  match '/auth/:provider/callback', :to => 'sessions#create',:via => [:get, :post]
-  match '/auth/failure', :to => 'sessions#failure',:via => [:get, :post]
+ # match '/auth/:provider/callback', :to => 'sessions#create',:via => [:get, :post]
+ # match '/auth/failure', :to => 'sessions#failure',:via => [:get, :post]
   #root "home#index"
   #get '/auth/:provider/callback', to: 'sessions#create'
 #  get "/auth/:provider", to: "sessions#create"
