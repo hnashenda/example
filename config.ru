@@ -59,6 +59,8 @@ class App < Sinatra::Base
     <body>
       <h3>Failed Authorization</h3>
       <p>Message: #{params[:message]}</p>
+      <p>Shop: #{request.env['omniauth.auth'].uid}</p>
+      <p>Token: #{request.env['omniauth.auth']['credentials']['token']}</p>
     </body>
     </html>
     HTML
