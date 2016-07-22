@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   get "search", to: "search#index"
   get "user/index"
   root "home#index"
-  #get "/auth/:provider", to: "sessions#create"
+  get "/auth/:provider", to: "sessions#create"
   resources :users, path: '/wishlist'
   resources :products, path: '/add'
   resources :users_products, only: :destroy
