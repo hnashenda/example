@@ -1,9 +1,8 @@
 <h1>Sessions#create</h1>
 <p>Find me in app/views/sessions/create.html.erb</p>
 <h3>Authorized</h3>
-      <p>Shop: <%=request.env['omniauth.auth'].uid%></p>
+      <p>Shop: <%=shop_session%></p>
 <p>Shop21: request.env['omniauth.auth'].uid</p>
       <p>Token: <%=request.env['omniauth.auth']['credentials']['token']%></p>
 
 <p>session = ShopifyAPI::Session.new("SHOP_NAME.myshopify.com", token)</p>
-<p>session = <%=ShopifyAPI::Session.new(<%=request.env['omniauth.auth'].uid%>, <%=request.env['omniauth.auth']['credentials']['token']%>)%></p>
