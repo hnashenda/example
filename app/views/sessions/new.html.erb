@@ -1,0 +1,11 @@
+<%= link_to "Connect With Facebook", "/auth/:provider/callback" %>
+
+<div class="form-outer">
+	<h2>Log in to view your wishlist</h2>
+
+  <form action="/auth/shopify" method="get">
+  <label for="shop">Enter your store's URL:</label>
+  <input type="text" name="shop" placeholder="your-shop-url.myshopify.com">
+  <button type="submit">Log In</button>
+</form>
+</div>
