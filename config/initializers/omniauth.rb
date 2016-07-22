@@ -1,3 +1,8 @@
 Rails.application.config.middleware.use OmniAuth::Builder do
-  provider :shopify, ENV['3a767680d445822e32785eb41b191476'], ENV['e432c2446a6ad93efe45a3612a67fa5c-1469118110'], :scope => 'read_products,read_orders,write_content'
+
+
+  provider :shopify, "613ab5bbe4133b6c004ec13676f9cbb9", "64b5df6d0f4c4a183a9fe646cbf0b73f", :scope => 'read_products,read_orders,read_customers,write_shipping'
+
+
+
 end

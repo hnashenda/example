@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get "users_products/destroy"
+   get "users_products/destroy"
   get "products/index"
   get "add/index"
   get "search", to: "search#index"
