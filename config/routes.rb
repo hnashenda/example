@@ -1,17 +1,10 @@
 Rails.application.routes.draw do
-  get "users_products/destroy"
+   get "users_products/destroy"
   get "products/index"
   get "add/index"
   get "search", to: "search#index"
   get "user/index"
   root "home#index"
-  get '/auth/:provider/callback', to: 'sessions#create'
-
-  #match "/auth/:provider/callback" => "shopify/sessions#create", :as => :authenticate
-
-#namespace :shopify do
- # resource :session, :only => [:new, :create, :destroy]
-#end
   #get "/auth/:provider", to: "sessions#create"
   resources :users, path: '/wishlist'
   resources :products, path: '/add'
