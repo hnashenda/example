@@ -17,7 +17,7 @@ get "users_products/destroy"
  # get "add/index"
 #  get "search", to: "search#index"
   #get "user/index"
-  root "home#index"
+  #root "home#index"
  # get '/auth/:provider/callback', to: 'sessions#create'
   #get   '/login', :to => 'sessions#new', :as => :login
  # match '/auth/:provider/callback', :to => 'sessions#create',:via => [:get, :post]
