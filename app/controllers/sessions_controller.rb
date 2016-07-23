@@ -9,6 +9,8 @@ class SessionsController < ApplicationController
     @session =ShopifyAPI::Session.new(@shop_session, @token)
     ShopifyAPI::Base.activate_session(@session)
     @shop = ShopifyAPI::Shop.current
+
+    @product = ShopifyAPI::Product.find(179761209)
   #render :text => auth_hash.inspect
 
 
