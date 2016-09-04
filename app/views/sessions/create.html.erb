@@ -20,7 +20,7 @@
   <%=f.email %>
   <%=f.abandoned_checkout_url %>
 
-  <p> testing the date time: <%=f.created_at %> and today <% Date.new(2009,6,13) %> </p>
+  <p> testing the date time: <%=f.created_at %> and today <%= Date.today %> </p>
 
 
   <% end %>
