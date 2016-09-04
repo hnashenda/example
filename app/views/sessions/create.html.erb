@@ -19,6 +19,10 @@
   <%=f%>
   <%=f.email %>
   <%=f.abandoned_checkout_url %>
+
+  <p> testing the date time: <%=f.abandoned_checkout_url.where("created_at > ?", 7.days.ago) %> </p>
+
+
   <% end %>
 
 </p>
