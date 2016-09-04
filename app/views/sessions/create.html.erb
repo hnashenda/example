@@ -16,7 +16,9 @@
 
 
 <p>The checkout normal: <% @checkout.each do |f|%>
-  
+     <% f.attributes[:cart_token].each do |carttoken| %>
+        <%=carttoken%>
+     <% end %>
   <% end %>
 
 </p>
