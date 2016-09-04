@@ -20,12 +20,8 @@
   <%=f.email %>
   <%=f.abandoned_checkout_url %>
 
-  <p> testing the date time: <%=f.created_at %> and today <%= Date.today %> and days ago <%= 7.days.ago %> </p>
-  <p><% if(f.created_at > ?, 7.days.ago)%>
-    close
-    <% else %>
-    hello
-    <% end%>
+  <p> testing the date time: <%=f.created_at %> and today <%= Date.today %> and days ago <%= 7.f.created_at.ago %> </p>
+  
 </p>
 
   <% end %>
