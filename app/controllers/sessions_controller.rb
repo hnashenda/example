@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
     @session =ShopifyAPI::Session.new(@shop_session, @token)
     ShopifyAPI::Base.activate_session(@session)
     @shop = ShopifyAPI::Shop.current
-    @checkout = ShopifyAPI::Checkout
+    @checkout = ShopifyAPI::Checkout.all
 
     @product = ShopifyAPI::Product.all
   #render :text => auth_hash.inspect
