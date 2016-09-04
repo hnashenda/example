@@ -22,6 +22,15 @@
 
   <p> testing the date time: <%=f.created_at %> and today <% Date.today %> </p>
 
+   <% if (f.created_at < Date.now-14.days) %>
+    "overdue"
+   <% elsif (f.created_at < Date.now-7.days) %>
+    "due"
+    <% end %>
+
+
+
+
 
   <% end %>
 
