@@ -20,16 +20,7 @@
   <%=f.email %>
   <%=f.abandoned_checkout_url %>
 
-  <p> testing the date time: <%=f.created_at %> and today <% Date.today %> </p>
-
-   <% if (f.created_at < Date.now-14.days) %>
-    "overdue"
-   <% elsif (f.created_at < Date.now-7.days) %>
-    "due"
-    <% end %>
-
-
-
+  <p> testing the date time: <%=f.created_at %> and today <% Time.now.to_date %> </p>
 
 
   <% end %>
