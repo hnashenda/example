@@ -13,6 +13,22 @@ class SessionsController < ApplicationController
     @checkout_normal = ShopifyAPI::Checkout
     @checkout_count = ShopifyAPI::Checkout.count
     @product = ShopifyAPI::Product.all
+
+    new_product = ShopifyAPI::Product.new
+    new_product.title = "Burton Custom Freestlye 151"
+    new_product.product_type = "Snowboard"
+    new_product.vendor = "Burton"
+    
+    new_product.metafields = [
+  {
+    "key" => "item_size",
+    "value" => '125gr',
+    "value_type" => "string",
+    "namespace" => "global"
+  }
+]
+
+
   #render :text => auth_hash.inspect
 
 
