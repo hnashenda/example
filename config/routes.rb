@@ -2,6 +2,11 @@ Rails.application.routes.draw do
   resources :accounts
   resources :accounts
   resources :accounts
+  resources :accounts do
+     member do
+        get 'test_connection'
+     end
+  end
 get "users_products/destroy"
   get "products/index"
   get "add/index"
