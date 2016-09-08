@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resources :accounts
+  resources :accounts
+  resources :accounts
 get "users_products/destroy"
   get "products/index"
   get "add/index"
